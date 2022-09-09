@@ -16,7 +16,7 @@ $.ajax({
         });
         console.log(data);
 
-        // Se captura data con los paises con mas casos activos (tabla).
+        
         let paisesOrdenados = data.sort();
 
         // Variable de un arreglo vacio totalPaises.
