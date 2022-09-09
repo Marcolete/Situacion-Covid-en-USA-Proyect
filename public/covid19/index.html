@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Hito I</title>
+    <!-- d. CDN de jQuery. -->
+    <!-- Jquery 3.5.1 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- c. CDN de un framework de CSS como Bootstrap o similar -->
+    <!-- Bootstrap 4.6.5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Mis Archivos -->
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/svg" href="./assets/img/favicon.ico">
+    <!-- Mi Scritp JS -->
+    <script src="./assets/js/script.js"></script>
+    <!-- Mi Estilo CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+    <!-- 1.- Estructura Basica HTML -->
+
+    <!-- a. Un Menú de navegación con las opciones: Home y USA -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/favicon.ico" width="40" height="40" class="d-inline-block align-content-center">
+                Hito I</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usa.html">USA</a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <!-- b. Una sección donde se muestre el gráfico de barras -->
+    <div id="chartContainerUno" class="pt-2 container-fluid" style="height: 370px; width: 75%;"></div>
+
+    <!-- Tabla todos los Paises por orden Alfabetico -->
+    <div class="table-body p-5">
+        <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th class="th-sm">Pais</th>
+                    <th class="th-sm">Casos Activos</th>
+                    <th class="th-sm">Casos Confirmados</th>
+                    <th class="th-sm">Casos Muertos</th>
+                    <th class="th-sm">Casos Recuperados</th>
+                    <th class="th-sm">Detalles</th>
+                </tr>
+            </thead>
+            <tbody id="dtBasicExample">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Pais</th>
+                    <th>Casos Activos</th>
+                    <th>Casos Confirmados</th>
+                    <th>Casos Muertos</th>
+                    <th>Casos Recuperados</th>
+                    <th>Detalles</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Paises Covid 19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <!-- Grafico de Torta -->
+                        <div id="chartContainerDos" style="height: 370px; width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- e. CDN de alguna librería de gráficas cómo Chart Js o Canvas Js -->
+    <!-- Script Canvas JS Grafico de Barras -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!-- Bundle Popper y jQuery 3.5.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
